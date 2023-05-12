@@ -61,11 +61,11 @@ available_node_types:
             value: |
               #cloud-config
               users:
-                - name: {{ssh_user}}
+                - name: skypilot:ssh_user
                   shell: /bin/bash
                   sudo: ALL=(ALL) NOPASSWD:ALL
                   ssh-authorized-keys:
-                    - {{ssh_public_key_content}}
+                    - skypilot:ssh_public_key_content
               bootcmd:
                 - echo 'ClientAliveInterval 720' >> /etc/ssh/sshd_config
                 - echo 'ClientAliveCountMax 720' >> /etc/ssh/sshd_config
@@ -125,11 +125,11 @@ available_node_types:
             value: |
               #cloud-config
               users:
-                - name: {{ssh_user}}
+                - name: skypilot:ssh_user
                   shell: /bin/bash
                   sudo: ALL=(ALL) NOPASSWD:ALL
                   ssh-authorized-keys:
-                    - {{ssh_public_key_content}}
+                    - skypilot:ssh_public_key_content
               bootcmd:
                 - echo 'ClientAliveInterval 720' >> /etc/ssh/sshd_config
                 - echo 'ClientAliveCountMax 720' >> /etc/ssh/sshd_config
